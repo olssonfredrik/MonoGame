@@ -121,7 +121,7 @@ namespace Microsoft.Xna.Framework.Input
 
         internal static void Cleanup()
         {
-            throw new NotImplementedException();
+            Sdl.SDL_QuitSubSystem( Sdl.SDL_INIT_JOYSTICK );
         }
     }
 

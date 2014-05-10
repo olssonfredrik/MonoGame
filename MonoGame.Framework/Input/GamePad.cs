@@ -72,5 +72,11 @@ namespace Microsoft.Xna.Framework.Input
 
             return PlatformSetVibration(index, MathHelper.Clamp(leftMotor, 0.0f, 1.0f), MathHelper.Clamp(rightMotor, 0.0f, 1.0f));
         }
+
+		public static void Reset()
+		{
+			Cleanup();
+			AutoConfig();
+		}
     }
 }
