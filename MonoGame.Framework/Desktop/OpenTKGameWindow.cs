@@ -311,7 +311,8 @@ namespace Microsoft.Xna.Framework
 
             GraphicsContext.ShareContexts = true;
 
-            window = new NativeWindow();
+            window = new NativeWindow( 1280, 720, "MonoGame", GameWindowFlags.Default, GraphicsMode.Default, DisplayDevice.Default );
+            window.WindowState = WindowState.Minimized;
             window.Closing += new EventHandler<CancelEventArgs>(OpenTkGameWindow_Closing);
             window.Resize += OnResize;
             window.KeyDown += new EventHandler<OpenTK.Input.KeyboardKeyEventArgs>(Keyboard_KeyDown);
